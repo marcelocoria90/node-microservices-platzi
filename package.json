@@ -1,0 +1,40 @@
+{
+  "name": "api-auth",
+  "version": "1.0.0",
+  "description": "Entrega de proyecto - curso microservicios - platzi",
+  "main": "./server/server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server/server.js",
+    "dev": "node --watch ./server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelocoria90/node-microservices-platzi.git"
+  },
+  "keywords": [
+    "node",
+    "microservices"
+  ],
+  "author": "Marcelo Coria",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcelocoria90/node-microservices-platzi/issues"
+  },
+  "homepage": "https://github.com/marcelocoria90/node-microservices-platzi#readme",
+  "dependencies": {
+    "dotenv": "16.3.1",
+    "express": "4.18.2",
+    "morgan": "1.10.0",
+    "oracledb": "6.2.0",
+    "uuid": "9.0.1",
+    "zod": "3.22.4"
+  },
+  "devDependencies": {
+    "standard": "17.1.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  }
+}
