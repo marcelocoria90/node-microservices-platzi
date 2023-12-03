@@ -8,11 +8,13 @@ export const initDb = async () => {
   try {
     const connectionPool = await oracledb.createPool(config)
     cnxPool = connectionPool
-    console.log(`⚡ Connection ${config.connectString} ⚡`)
+    console.log(`💡🍀Connection ${config.connectString}🍀💡`)
   } catch (e) {
     console.error(e)
   }
 }
+
+initDb()
 
 export const getConnection = async () => {
   try {
@@ -25,7 +27,7 @@ export const getConnection = async () => {
 }
 
 export const executeQuery = async (sql, binds = [], options = {}) => {
-  return new Promise(async (resolve, reject) => {
+  return await new Promise(async (resolve, reject) => {
     let connection
     try {
       connection = await getConnection()
