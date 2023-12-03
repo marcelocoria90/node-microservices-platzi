@@ -24,15 +24,20 @@
   },
   "homepage": "https://github.com/marcelocoria90/node-microservices-platzi#readme",
   "dependencies": {
+    "@joi/date": "2.1.0",
     "dotenv": "16.3.1",
     "express": "4.18.2",
+    "joi": "17.11.0",
     "morgan": "1.10.0",
     "oracledb": "6.2.0",
     "uuid": "9.0.1",
     "zod": "3.22.4"
   },
   "devDependencies": {
-    "standard": "17.1.0"
+    "joi-to-swagger": "6.2.0",
+    "standard": "17.1.0",
+    "swagger-autogen": "2.23.7",
+    "swagger-ui-express": "5.0.0"
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"

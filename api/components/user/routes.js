@@ -8,7 +8,7 @@ export const userRouter = ({ model }) => {
   router.get('/', controller.list)
   //   router.get('/:id', controller.get)
   router.post('/', controller.upsert)
-  //   router.put('/:id', controller.update)
+  router.post('/follow/:iduser', controller.follow)
 
   return router
 }

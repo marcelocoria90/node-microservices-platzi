@@ -106,8 +106,10 @@ export class UserModel {
 
   static async follow (user) {
     try {
-      const query = 'MERGE INTO WEBAPI.wuf_users_followers USING DUAL ON (uf_iduser = :iduser AND uf_iduserfollower = :iduserfollower) WHEN NOT MATCHED THEN INSERT (uf_iduser, uf_iduserfollower) VALUES (:iduser, :iduserfollower)'
-      const binds = [user.iduser, user.iduserfollower]
+      const ciduser = user.iduser
+      const ciduserfollower = user.iduserfollower
+      const query = 'MERGE INTO WEBAPI.wuf_usersfollowers USING DUAL ON (uf_iduser = :iduser AND uf_iduserfollower = :iduserfollower) WHEN NOT MATCHED THEN INSERT (uf_iduser, uf_iduserfollower) VALUES (:iduser, :iduserfollower)'
+      const binds = [ciduser, ciduserfollower, user.iduser, user.iduserfollower]
 
       const options = {
         autoCommit: true

@@ -33,6 +33,8 @@ export class UserController {
   upsert = async (req, res, _next) => {
     try {
       const { body } = req
+
+      console.log(body)
       const result = await this.userModel.upsert(body)
       res.status(200).json(result)
     } catch (e) {
@@ -42,8 +44,9 @@ export class UserController {
 
   follow = async (req, res, _next) => {
     try {
-      const { body } = req
-      const result = await this.userModel.follow(body)
+      const { params } = req
+      console.log('🚩💥 paramas', params)
+      const result = await this.userModel.follow(params)
       res.status(200).json(result)
     } catch (e) {
       console.log(e)
