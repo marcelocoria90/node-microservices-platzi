@@ -2,11 +2,7 @@ import express, { json } from 'express'
 import 'dotenv/config'
 import morgan from 'morgan'
 
-import { initDb } from '../db/oracle/index.js'
-
 import { userRouter } from './components/user/routes.js'
-
-initDb()
 
 export const createApp = ({ model }) => {
   const app = express()
